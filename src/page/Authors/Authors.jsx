@@ -4,14 +4,14 @@ import AuthorCard from "../../components/AuthorCard/AuthorCard";
 
 const Authors = () => {
   return (
-    <section class="teachers">
+    <section class="authors">
       <h1 class="heading">All Authors</h1>
 
       <form action="" method="post" class="search-tutor">
         <input
           type="text"
           name="search_box"
-          placeholder="search tutors..."
+          placeholder="search Authors..."
           required
           maxlength="100"
         />

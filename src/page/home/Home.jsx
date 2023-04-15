@@ -1,6 +1,7 @@
 import React from "react";
 import "./home.css";
 import Card from "../../components/Card/Card";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -125,9 +126,9 @@ const Home = () => {
         </div>
 
         <div class="more-btn">
-          <a href="#" class="inline-option-btn">
+          <Link to="/books" class="inline-option-btn">
             view all Books
-          </a>
+          </Link>
         </div>
       </section>
     </>

@@ -5,8 +5,23 @@ import Card from "./../../components/Card/Card";
 
 const Books = () => {
   return (
-    <section class="courses">
+    <section class="books">
       <h1 class="heading">All Books</h1>
+
+      <form action="" method="post" class="search-tutor">
+        <input
+          type="text"
+          name="search_box"
+          placeholder="search Books..."
+          required
+          maxlength="100"
+        />
+        <button
+          type="submit"
+          class="fas fa-search"
+          name="search_tutor"
+        ></button>
+      </form>
 
       <div class="box-container">
         <Card />

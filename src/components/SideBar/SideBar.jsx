@@ -1,5 +1,6 @@
 import React from "react";
 import "./sidebar.css";
+import { Link } from "react-router-dom";
 
 const SideBar = () => {
   return (
@@ -18,26 +19,22 @@ const SideBar = () => {
       </div>
 
       <nav className="navbar">
-        <a href="#">
+        <Link to="/">
           <i className="fas fa-home"></i>
           <span>home</span>
-        </a>
-        <a href="#">
+        </Link>
+        <Link to="/books">
           <i className="fas fa-question"></i>
-          <span>about</span>
-        </a>
-        <a href="#">
-          <i className="fas fa-graduation-cap"></i>
-          <span>courses</span>
-        </a>
-        <a href="#">
+          <span>All Books</span>
+        </Link>
+        <Link to="/authors">
           <i className="fas fa-chalkboard-user"></i>
-          <span>teachers</span>
-        </a>
-        <a href="#">
+          <span>All Authors</span>
+        </Link>
+        <Link to="/contactus">
           <i className="fas fa-headset"></i>
-          <span>contact us</span>
-        </a>
+          <span>Contact Us</span>
+        </Link>
       </nav>
     </div>
   );
