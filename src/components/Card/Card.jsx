@@ -13,11 +13,11 @@ const Card = () => {
       </div>
       <div class="thumb">
         <img src="images/thumb-1.png" alt="" />
-        <span>10 videos</span>
+        <span>10 Liked</span>
       </div>
       <h3 class="title">complete HTML tutorial</h3>
-      <a href="playlist.html" class="inline-btn">
-        view playlist
+      <a href="#" class="inline-btn">
+        view Books
       </a>
     </div>
   );
