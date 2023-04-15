@@ -8,13 +8,15 @@ import Books from "./page/Books/Books";
 import Profile from "./page/Profile/Profile";
 import Authors from "./page/Authors/Authors";
 import AuthorProfile from "./page/AuthorProfile/AuthorProfile";
+import SingleBook from "./page/SingleBook/SingleBook";
+import ContactUs from "./page/ContactUs/ContactUs";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
       <SideBar />
-      <AuthorProfile />
+      <ContactUs />
       <Footer />
     </div>
   );
