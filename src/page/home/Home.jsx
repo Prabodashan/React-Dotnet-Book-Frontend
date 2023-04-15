@@ -113,7 +113,7 @@ const Home = () => {
       </section>
 
       <section class="courses">
-        <h1 class="heading">our courses</h1>
+        <h1 class="heading">our Books</h1>
 
         <div class="box-container">
           <Card />
