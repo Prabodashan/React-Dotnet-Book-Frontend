@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import axios from "axios";
+
 import "./singlebook.css";
 
 const SingleBook = () => {
+  const [book, setBook] = useState({});
+
+  const location = useLocation();
+
+  const bookId = location.pathname.split("/")[2];
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(`/Books/get-book-by-id/${bookId}`);
+        setBook(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, [bookId]);
+
+  console.log(book);
+
   return (
     <section class="playlist-details">
       <h1 class="heading">Book details</h1>
@@ -20,23 +43,19 @@ const SingleBook = () => {
         </div>
         <div class="column">
           <div class="tutor">
-            <img src="images/pic-2.jpg" alt="" />
+            <img src={book.coverUrl} alt="book link" />
             <div>
-              <h3>john deo</h3>
-              <span>21-10-2022</span>
+              <h3>{book.publisherName}</h3>
+              <span>{book.genre}</span>
             </div>
           </div>
 
           <div class="details">
-            <h3>complete HTML tutorial</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum
-              minus reiciendis, error sunt veritatis exercitationem deserunt
-              velit doloribus itaque voluptate.
-            </p>
-            <a href="teacher_profile.html" class="inline-btn">
+            <h3>{book.title}</h3>
+            <p>{book.description}</p>
+            <Link to="/" class="inline-btn">
               view profile
-            </a>
+            </Link>
           </div>
         </div>
       </div>

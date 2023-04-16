@@ -17,6 +17,7 @@ import AuthorProfile from "./page/AuthorProfile/AuthorProfile";
 import SingleBook from "./page/SingleBook/SingleBook";
 import ContactUs from "./page/ContactUs/ContactUs";
 import Home from "./page/Home/Home";
+import AddBook from "./page/AddBook/AddBook";
 
 const Layout = () => {
   return (
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
         element: <Books />,
       },
       {
-        path: "/singlebook",
+        path: "/singlebook/:id",
         element: <SingleBook />,
       },
       {
@@ -62,6 +63,10 @@ const router = createBrowserRouter([
       {
         path: "/contactus",
         element: <ContactUs />,
+      },
+      {
+        path: "/addbook",
+        element: <AddBook />,
       },
     ],
   },

@@ -13,7 +13,7 @@ const SideBar = () => {
         <img src="images/pic-1.jpg" className="image" alt="" />
         <h3 className="name">Prabod</h3>
         <p className="role">Admin</p>
-        <a href="#" className="btn">
+        <a href="/profile" className="btn">
           view profile
         </a>
       </div>
@@ -24,11 +24,11 @@ const SideBar = () => {
           <span>home</span>
         </Link>
         <Link to="/books">
-          <i className="fas fa-question"></i>
+          <i className="fas fa-book"></i>
           <span>All Books</span>
         </Link>
         <Link to="/authors">
-          <i className="fas fa-chalkboard-user"></i>
+          <i className="fas fa-user"></i>
           <span>All Authors</span>
         </Link>
         <Link to="/contactus">
